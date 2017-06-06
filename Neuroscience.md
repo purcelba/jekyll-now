@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About2
-permalink: /about2/
+title: Neuroscience
+permalink: /Neuroscience/
 ---
 
 Some information about you!2
