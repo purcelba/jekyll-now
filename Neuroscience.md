@@ -4,6 +4,7 @@ title: Neuroscience
 permalink: /Neuroscience/
 ---
 My research aims to understand processes by which the primate brain integrates diverse sources of information to select appropriate actions and how these processes flexibly adapt to improve performance in response to experienced outcomes.  To do this, I use use a sophisticated combination of computational modeling, behavioral studies in human and nonhuman primates, neurophysiological recordings at a variety of spatial scales including single-unit recordings, large-scale population recordings in multiple brain areas, and extracranial EEG, and manipulation of neural responses via electrical stimulation in the context of beahvior.
+
 ___
 
 ## Large-scale recording and manipulation of neural populations
