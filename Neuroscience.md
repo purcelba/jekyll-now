@@ -3,7 +3,7 @@ layout: page
 title: Neuroscience research
 permalink: /Neuroscience/
 ---
-I study the neural mechanisms of visual perception, decision making, and adaptive behavior.  My research aims to understand processes by which the primate brain integrates diverse sources of information (e.g., sensory, rewards, prior beliefs) into a strategy to select appropriate actions and how the strategy can flexibly adapted to  improve performance.  To do this, I use use a sophisticated combination of computational modeling, behavioral studies in humans and nonhuman primates, and neurophysiological recordings from populations of neurons in multiple brain areas.  I use model-based analyses and machine-learning algorithms to accurately predict subject's behavior based on their past history of experience and the observed neural population states.
+I study the neural mechanisms of visual perception, decision making, and adaptive behavior.  My research aims to understand processes by which the primate brain integrates diverse types of information (e.g., sensory, rewards, prior beliefs) into a strategy to select appropriate actions and how the strategy can flexibly adapted to  improve performance.  To do this, I use use a sophisticated combination of computational modeling, behavioral studies in humans and nonhuman primates, and neurophysiological recordings from populations of neurons in multiple brain areas.  I use model-based analyses and machine-learning algorithms to accurately predict subject's behavior based on their past history of experience and the observed neural population states.
 
 ___
 
