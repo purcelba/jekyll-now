@@ -19,7 +19,7 @@ The training data set consists of user information collected from 6/28/2010 - 6/
 
 An additional data set provides web sessions records for a subset of the training and test data and can be linked to the user information via a user id.  
 
-
+   
 
 
 
