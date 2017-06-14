@@ -13,6 +13,12 @@ Airbnb is an online marketplace that enables people to lease or rent short-term 
 
 The training data set consists of user information collected from 6/28/2010 - 6/30/2014 with the booking destination (target variable) provided.  The test data set consists of the same user information collected from 7/1/2014 - 9/30/2014 with the booking destination to be predicted.  
 
+<p align="center">
+    <img src="/images/airbnb_user_data.png" width=75% /><br>
+<sub><b>Figure 1.</b> Example data.</sub>
+</p>
+<br>
+
 An additional data set provides web sessions records for a subset of the training and test data and can be linked to the user information via a user id.  
 
 
