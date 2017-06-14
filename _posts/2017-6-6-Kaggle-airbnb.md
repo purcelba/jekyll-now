@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Kaggle challenge: Airbnb - New User Bookings
+title: Kaggle challenge
 ---
 
 
