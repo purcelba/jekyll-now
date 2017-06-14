@@ -1,11 +1,7 @@
 ---
 layout: post
-title: Kaggle challenge
+title: Kaggle challenge | Airbnb New User Bookings
 ---
-
-
-
-# Background
 
 Airbnb is an online marketplace that enables people to lease or rent short-term lodging.  The goal of this challenge was to predict which country a new user's first booking destination will be based on a set of demographics and web session records.
 
