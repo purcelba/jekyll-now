@@ -21,7 +21,7 @@ Preliminary exploration revealed several interesting and informative aspects of 
 First, the target variable consisted of 12 possible country destinations making this a multiclass classification problem.  Moreover, the classes are highly unbalanced.  Non-bookings (NDF) and United States bookings (US) vastly outnumber all other classes (58% and 29% of the data set, respectively).  
 
 
-![Figure 3]({{ site.baseurl }}/images/country_destination_hist "Country destination histogram.")
+![Figure 3]({{ site.baseurl }}/images/country_destination_hist.png "Country destination histogram.")
 
 
 ****Insert country_destination histogram*****
