@@ -16,9 +16,13 @@ An additional data set provides web sessions records for a subset of the trainin
 ![Figure 2]({{ site.baseurl }}/images/airbnb_sessions.png "Example sessions data.")
 
 
-Preliminary exploration revealed several interesting and informative aspects of the data.  Here, I describe several of the most critical and additional details and code are available in this [Jupyter Notebook](link).
+Preliminary exploration revealed several interesting and informative aspects of the data.
 
-The target variable consisted of 12 possible country destinations making this a multiclass classification problem.  Moreover, the classes are highly unbalanced.  Non-bookings (NDF) and United States bookings (US) vastly outnumber all other classes (58% and 29% of the data set, respectively).  
+First, the target variable consisted of 12 possible country destinations making this a multiclass classification problem.  Moreover, the classes are highly unbalanced.  Non-bookings (NDF) and United States bookings (US) vastly outnumber all other classes (58% and 29% of the data set, respectively).  
+
+
+![Figure 3]({{ site.baseurl }}/images/country_destination_hist "Country destination histogram.")
+
 
 ****Insert country_destination histogram*****
 
