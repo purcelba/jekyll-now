@@ -15,11 +15,11 @@ An additional data set provides web sessions records for a subset of the trainin
 
 
 
-Preliminary exploration revealed several interesting and informative aspects of the data.  Here, I describe several of the most critical and additional details and code are available in this [Jupyter Notebook](link).
+Preliminary exploration revealed several interesting and informative aspects of the data.  Here, I describe several of the most critical and additional details and code are available in this Jupyter Notebook.
 
 The target variable consisted of 12 possible country destinations making this a multiclass classification problem.  Moreover, the classes are highly unbalanced.  Non-bookings (NDF) and United States bookings (US) vastly outnumber all other classes (58% and 29% of the data set, respectively).  
 
-****Insert country_destination histogram*****
+Insert country_destination histogram
 
 
 Many demographic features are also heavily unbalanced and contain missing values or other unusal observations that must be appropriately handled.
