@@ -9,10 +9,11 @@ Airbnb is an online marketplace that enables people to lease or rent short-term 
 
 The training data set consists of user information collected from 6/28/2010 - 6/30/2014 with the booking destination (target variable) provided.  The test data set consists of the same user information collected from 7/1/2014 - 9/30/2014 with the booking destination to be predicted.  
 
-![Figure 1]({{ site.baseurl }}/images/airbnb_user_data.png "Example data.")
+![Figure 1]({{ site.baseurl }}/images/airbnb_user_data.png "Example user data.")
 
 An additional data set provides web sessions records for a subset of the training and test data and can be linked to the user information via a user id.  
 
+![Figure 2]({{ site.baseurl }}/images/airbnb_sessions.png "Example sessions data.")
 
 
 Preliminary exploration revealed several interesting and informative aspects of the data.  Here, I describe several of the most critical and additional details and code are available in this [Jupyter Notebook](link).
