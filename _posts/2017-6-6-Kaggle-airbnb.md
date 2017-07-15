@@ -12,7 +12,7 @@ The training data set consists of user information collected from 6/28/2010 - 6/
 
 ![Figure 1]({{ site.baseurl }}/images/airbnb_user_data.png "Example user data.")
 <p align="center">
-    <font size="6"><b>Figure 1.</b> Example user data.</font>
+    <font size="2"><b>Figure 1.</b> Example user data.</font>
 </p>
 
 An additional data set provides web sessions records that can be linked to the user information tables via a user id.  Each record includes an action that was taken defined by the action name, type, and detail.  The number of seconds spent on the action are also provided.  
