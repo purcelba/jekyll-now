@@ -2,9 +2,10 @@
 layout: post
 title: Kaggle challenge | Airbnb New User Bookings
 ---
-
-![Figure 1]({{ site.baseurl }}/images/airbnb_kaggle_logo.png "Airbnb_kaggle_logo.")
-Airbnb is an online marketplace that enables people to lease or rent short-term lodging.  The goal of this challenge was to predict which country a new Airbnb user's first booking destination will be based on a set of demographics and web session records. Additionally, I used model-based appraoches to explore and understand which user factors were most predictive about whether and where a user would book.
+<br>
+![Logos]({{ site.baseurl }}/images/airbnb_kaggle_logo.png "Airbnb_kaggle_logo.")
+<br>
+Airbnb is an online marketplace that enables people to lease or rent short-term lodging.  The goal of this Kaggle challenge was to predict which country a new Airbnb user's first booking destination will be based on a set of demographics and web session records. Additionally, I used model-based analysis to understand which factors are most predictive about whether a new user would book a destination.
 
 # Data overview
 
@@ -18,10 +19,16 @@ The training data set consists of user information collected from 6/28/2010 - 6/
 An additional data set provides web sessions records that can be linked to the user information tables via a user id.  Each record includes an action that was taken defined by the action name, type, and detail.  The number of seconds spent on the action are also provided.  
 
 ![Figure 2]({{ site.baseurl }}/images/airbnb_sessions.png "Example sessions data.")
+<p align="center">
+    <font size="2"><b>Figure 2.</b> Example web sessions records.</font>
+</p>
 
 The target variable consisted of 12 possible country destinations making this a multiclass classification problem.  The classes are highly unbalanced.  Non-bookings (NDF) and United States bookings (US) vastly outnumber all other classes (58% and 29% of the data set, respectively).  Many demographic features are also heavily unbalanced and contain missing values or other unusal observations.
 
 ![Figure 3]({{ site.baseurl }}/images/country_destination_hist.png "Country destination histogram."){: .center-image }
+<p align="center">
+    <font size="2"><b>Figure 3.</b> Distribution of first user bookings by country destination.</font>
+</p>
 
 
 # Data preparation
@@ -40,8 +47,9 @@ To validate the models, I held out the last 10% of the training data set collect
 The logistic regression model accurately predicted whether or not a user would book a destination for 71.4% of the holdout dataset, which exceeds chance (62% in the holdout set).  Accordingly, the auROC curve was 0.75.  The resulting coefficients provide insight about which users will book a destination. For example, users who reach Airbnb via a particular web page (actual URL concealed) are more likely to book a destination.  Conversely, disengaged users that failed to provide demographic information like gender and age were less likely to book.  
 
 ![Figure 4]({{ site.baseurl }}/images/beta_cofficient_histogram.png "Betas."){: .center-image }
-[comment]: <> (Added .center-image to style.scss to make this work)
-
+<p align="center">
+    <font size="2"><b>Figure 4.</b> Non-zero regression coefficients used to predict users who did or did not book with Airbnb identified with L1-regularized logistic regression.  Positive coefficients indicate a positive relationship with probability of booking.  </font>
+</p>
 
 # Predicting booking destinations: 
 
@@ -54,15 +62,22 @@ I started with a one-versus-next L1-regularized logistic regression approach imp
 XGBoost is a tree ensembling method that learns a set of decision trees by asking whether new tree structures will adequately improve a regularized objective function. Unlike logistic regression, XGBoost learns nonlinear decision bounds.  One tradeoff is that the model requires more hyperparameters (e.g., number of trees, learning rate, etc), which I selected using randomized search with 5-fold cross validation.  The resulting model  produced a notable improvement in auROC for the holdout dataset (0.70). XGBoost also provides an index of feature importance, computed as the reduction in impurity at each node averaged over all trees for each feature.  Unlike the linear model, the XGBoost model could learn a nonlinear relationship between age and booking that was evident in the data.
 
 ![Figure 5]({{ site.baseurl }}/images/xgb_feature_importance_barh.png "XGB_feature_importance.")
+<p align="center">
+    <font size="2"><b>Figure 5.</b> Feature importance ratings obtained from XGBoost.  Larger values indicate that a feature promoted greater reductions in impurity.  </font>
+</p>
 
 ## Artificial neural network: Multi-layer perceptron
 Multi-layer perceptrons (MLP) are a class of feedforward neural network models that learns combinations of features to transform the data into a space where they become lineary separable.  These models are very powerful, but  highly parameterized and require careful training for good results.  I trained the model using mini-batch stochastic gradient descent implemented in Keras with a TensorFlow backend.  To efficiently select hyperparameters, I implemented a randomized search with 5-fold cross validation in parallel on a high-performance computing cluster.  The trained network outperformed both logistic regression and boosted trees on the holdout set (auROC = 0.74).  This algorithm would be a great choice for situations in which high accuracy is paramount, but long training times are not an issue.  
 
-![Figure 7]({{ site.baseurl }}/images/airbnb_conf_mat.png "Confusion matrices.")
-
-![Figure 8]({{ site.baseurl }}/images/auROC.png "auROC."){: .center-image }
-[comment]: <> (Added .center-image to style.scss to make this work)
-
+![Figure 6]({{ site.baseurl }}/images/airbnb_conf_mat.png "Confusion matrices.")
+<p align="center">
+    <font size="2"><b>Figure 6.</b> Confusion matrices for each of the three models. Shading indicates the predicted probability of each country destination (x-axis) by actual destination (y-axis).  Correct responses are on the diagnoal from upper left to lower right.  The models generally overpredict the NDF (non-bookings) and US (United States) classes due to the imbalanced data.  The multilayer perceptron achieves best performance primarily by better distinguishing the non-bookings class (note higher contrast), but all models struggle to discriminate bookings in non-US countries.
+    </font>
+</p>
+![Figure 7]({{ site.baseurl }}/images/auROC.png "auROC."){: .center-image }
+<p align="center">
+<font size="2"><b>Figure 7.</b> Macro-averaged area under the ROC curve for the three algorithms using the holdout data set (21,345 users).  The macro-average gives equal weight to classes regardless of the number of observations so that the NDF category does not dominate the statistic. Values greater than 0.5 indicate above chance discrimination (1.0 = perfect discrimination).  The same ordering of performance was confirmed using the full test set evaluated by Kaggle (62,096 users).  </font>
+</p>
 
 # Conclusions
 
