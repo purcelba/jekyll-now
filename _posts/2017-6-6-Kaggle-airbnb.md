@@ -54,9 +54,9 @@ Multi-layer perceptrons (MLP) are a class of feedforward neural network models t
 
 ![Figure 7]({{ site.baseurl }}/images/airbnb_conf_mat.png "Confusion matrices.")
 
-test
+test2
 <p align="center">
-    s![Figure 8]({{ site.baseurl }}/images/auROC.png "auROC.")
+    ![Figure 8]({{ site.baseurl }}/images/auROC.png "auROC.")
 </p>
 
 
