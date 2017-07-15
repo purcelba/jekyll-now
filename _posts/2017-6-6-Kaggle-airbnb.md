@@ -3,6 +3,7 @@ layout: post
 title: Kaggle challenge | Airbnb New User Bookings
 ---
 
+![Figure 1]({{ site.baseurl }}/images/airbnb_kaggle_logo.png "Airbnb_kaggle_logo.")
 Airbnb is an online marketplace that enables people to lease or rent short-term lodging.  The goal of this challenge was to predict which country a new Airbnb user's first booking destination will be based on a set of demographics and web session records. Additionally, I used model-based appraoches to explore and understand which user factors were most predictive about whether and where a user would book.
 
 # Data overview
@@ -10,6 +11,9 @@ Airbnb is an online marketplace that enables people to lease or rent short-term 
 The training data set consists of user information collected from 6/28/2010 - 6/30/2014 with the booking destination (target variable) provided (213,451 users).  The goal of the channelge is to preict the booking destination for a test data set collected from 7/1/2014 - 9/30/2014 (62,096 users).  
 
 ![Figure 1]({{ site.baseurl }}/images/airbnb_user_data.png "Example user data.")
+<p align="center">
+<sub><b>Figure 1.</b> Example user data.</sub>
+</p>
 
 An additional data set provides web sessions records that can be linked to the user information tables via a user id.  Each record includes an action that was taken defined by the action name, type, and detail.  The number of seconds spent on the action are also provided.  
 
@@ -17,7 +21,9 @@ An additional data set provides web sessions records that can be linked to the u
 
 The target variable consisted of 12 possible country destinations making this a multiclass classification problem.  The classes are highly unbalanced.  Non-bookings (NDF) and United States bookings (US) vastly outnumber all other classes (58% and 29% of the data set, respectively).  Many demographic features are also heavily unbalanced and contain missing values or other unusal observations.
 
-![Figure 3]({{ site.baseurl }}/images/country_destination_hist.png "Country destination histogram.")
+![Figure 3]({{ site.baseurl }}/images/country_destination_hist.png "Country destination histogram."){: .center-image }
+[comment]: <> (Added .center-image to style.scss to make this work)
+
 
 # Data preparation
 
@@ -34,7 +40,8 @@ To validate the models, I held out the last 10% of the training data set collect
 
 The logistic regression model accurately predicted whether or not a user would book a destination for 71.4% of the holdout dataset, which exceeds chance (62% in the holdout set).  Accordingly, the auROC curve was 0.75.  The resulting coefficients provide insight about which users will book a destination. For example, users who reach Airbnb via a particular web page (actual URL concealed) are more likely to book a destination.  Conversely, disengaged users that failed to provide demographic information like gender and age were less likely to book.  
 
-![Figure 4]({{ site.baseurl }}/images/beta_cofficient_histogram.png "Betas.")
+![Figure 4]({{ site.baseurl }}/images/beta_cofficient_histogram.png "Betas."){: .center-image }
+[comment]: <> (Added .center-image to style.scss to make this work)
 
 
 # Predicting booking destinations: 
@@ -47,15 +54,15 @@ I started with a one-versus-next L1-regularized logistic regression approach imp
 ## Boosted trees: XGBoost
 XGBoost is a tree ensembling method that learns a set of decision trees by asking whether new tree structures will adequately improve a regularized objective function. Unlike logistic regression, XGBoost learns nonlinear decision bounds.  One tradeoff is that the model requires more hyperparameters (e.g., number of trees, learning rate, etc), which I selected using randomized search with 5-fold cross validation.  The resulting model  produced a notable improvement in auROC for the holdout dataset (0.70). XGBoost also provides an index of feature importance, computed as the reduction in impurity at each node averaged over all trees for each feature.  Unlike the linear model, the XGBoost model could learn a nonlinear relationship between age and booking that was evident in the data.
 
-![Figure 5]({{ site.baseurl }}/images/xgb_feature_importance_barh.png "Age bins.")
+![Figure 5]({{ site.baseurl }}/images/xgb_feature_importance_barh.png "XGB_feature_importance.")
 
 ## Artificial neural network: Multi-layer perceptron
 Multi-layer perceptrons (MLP) are a class of feedforward neural network models that learns combinations of features to transform the data into a space where they become lineary separable.  These models are very powerful, but  highly parameterized and require careful training for good results.  I trained the model using mini-batch stochastic gradient descent implemented in Keras with a TensorFlow backend.  To efficiently select hyperparameters, I implemented a randomized search with 5-fold cross validation in parallel on a high-performance computing cluster.  The trained network outperformed both logistic regression and boosted trees on the holdout set (auROC = 0.74).  This algorithm would be a great choice for situations in which high accuracy is paramount, but long training times are not an issue.  
 
 ![Figure 7]({{ site.baseurl }}/images/airbnb_conf_mat.png "Confusion matrices.")
 
-test4
 ![Figure 8]({{ site.baseurl }}/images/auROC.png "auROC."){: .center-image }
+[comment]: <> (Added .center-image to style.scss to make this work)
 
 
 # Conclusions
