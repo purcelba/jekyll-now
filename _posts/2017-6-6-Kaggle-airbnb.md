@@ -21,9 +21,9 @@ The target variable consisted of 12 possible country destinations making this a 
 
 # Data preparation
 
-I formatted and cleaned the user information to be suitable for modeling.  I checked the distributions of all user features.  Dates were formatted into years, months, days, and weeks of the year.  Ages that were likely to be errors (<14 or >100) were recoded into missing values.  Missing values were not imputed, but were coded as zero and a new feature was added to indicate missing values.  One-hot-feature encoding was used to generate features for all categorical variables.  All features were rescaled between zero and one so that features with higher magnitudes did not dominate the objective functions for certain algorithms.
+I formatted and cleaned the user information to be suitable for modeling.  I checked the distributions of all user features.  Dates were formatted into years, months, days, and weeks of the year.  Ages that were likely to be errors (<14 or >100) were recoded into missing values.  Missing values were not imputed, but were coded as zero and a new feature was added to indicate missing values.  One-hot-feature encoding was used to generate features for all categorical variables.  All features were rescaled between zero and one so that features with higher magnitudes did not dominate the objective functions for certain algorithms.  
 
-For the web sessions data, I encoded each action name, type, and detail as a separate feature.  These were binary variables to indicate whether or not the user took a particular action at any time.  I also explored versions that considered the number of times a user took each action and the total time spent on each action, but found no increase in model performance.
+For the web sessions data, I encoded each action name, type, and detail as a separate feature.  These were binary variables to indicate whether or not the user took a particular action at any time.  I also explored versions that considered the number of times a user took each action and the total time spent on each action, but found no increase in model performance.  In total, the models used 346 features.
 
 
 # Predicting whether a new user will book.
