@@ -44,21 +44,19 @@ I next moved to the multiclass classification problem of predicting the actual c
 ## L1-regularized logistic regression
 I started with a one-versus-next L1-regularized logistic regression approach implemented in scikit-learn.  The model trains a family of linear classifiers to distinguish one class from all others, then chooses the class with the highest probability.  The L1-regularization model performance is above chance as indicated by a macro auROC of X.  The confusion matrix indicates that the model is heavily biased to the NDF and US categories.  
 
-## XGBoost
+## Boosted trees: XGBoost
 XGBoost is a tree ensembling method that learns a set of decision trees by asking whether new tree structures will improve a regularized objective function. Unlike logistic regression, XGBoost learns nonlinear decision bounds, but relies on more hyperparameters (e.g., number of trees, learning rate, etc).  I avoided hand tuning of hyperparameters by using randomized search with 5-fold cross validation.  The resulting model  produced a notable improvement in auROC for the holdout dataset. XGBoost also provides an index of feature importance, computed as the reduction in impurity at each node averaged over all trees for each feature.  Unlike the linear model, the XGBoost model learned a nonlinear relationship between age and booking that was evident in the data.
 
 ![Figure 5]({{ site.baseurl }}/images/xgb_feature_importance_barh.png "Age bins.")
 
 ![Figure 6]({{ site.baseurl }}/images/pBook_age_bins.png "Age bins.")
 
-## Neural networks: Multi-layer perceptron
+## Artificial neural network: Multi-layer perceptron
 Multi-layer perceptrons (MLP) are a class of feedforward neural network models that learns combinations of features to transform the data into a space where they become lineary separable.  These models are very powerful, but  highly parameterized and require careful training for good results.  I trained the model using mini-batch stochastic gradient descent implemented in Keras with a TensorFlow backend.  To efficiently select hyperparameters, I implemented a randomized search with 5-fold cross validation in parallel on a high-performance computing cluster.  The trained network outperformed both logistic regression and boosted trees on the holdout set.  This algorithm would be a great choice for situations in which high accuracy is paramount, but long training times are not an issue.  
 
 ![Figure 7]({{ site.baseurl }}/images/airbnb_conf_mat.png "Confusion matrices.")
 
-![Figure 8]({{ site.baseurl }}/images/auROC.png) { width: 100px; }
-
-<img src={{ site.baseurl }}/images/auROC.png
+![Figure 8]({{ site.baseurl }}/images/auROC.png)
 
 
 # Conclusions
