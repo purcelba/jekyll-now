@@ -12,7 +12,7 @@ The training data set consists of user information collected from 6/28/2010 - 6/
 
 ![Figure 1]({{ site.baseurl }}/images/airbnb_user_data.png "Example user data.")
 <p align="center">
-<sub><b>Figure 1.</b> Example user data.</sub>
+    <font size="6"><b>Figure 1.</b> Example user data.</font>
 </p>
 
 An additional data set provides web sessions records that can be linked to the user information tables via a user id.  Each record includes an action that was taken defined by the action name, type, and detail.  The number of seconds spent on the action are also provided.  
@@ -22,7 +22,6 @@ An additional data set provides web sessions records that can be linked to the u
 The target variable consisted of 12 possible country destinations making this a multiclass classification problem.  The classes are highly unbalanced.  Non-bookings (NDF) and United States bookings (US) vastly outnumber all other classes (58% and 29% of the data set, respectively).  Many demographic features are also heavily unbalanced and contain missing values or other unusal observations.
 
 ![Figure 3]({{ site.baseurl }}/images/country_destination_hist.png "Country destination histogram."){: .center-image }
-[comment]: <> (Added .center-image to style.scss to make this work)
 
 
 # Data preparation
