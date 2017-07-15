@@ -62,7 +62,7 @@ I started with a one-versus-next L1-regularized logistic regression approach imp
 
 ![Figure 5]({{ site.baseurl }}/images/airbnb_conf_mat.png "Confusion matrices.")
 <p align="center">
-<font size="2"><b>Figure 6.</b> Confusion matrices for each of the three models. Shading indicates the predicted probability of each country destination (x-axis) by actual destination (y-axis).  Correct responses are on the diagnoal from upper left to lower right.  The models generally overpredict the NDF (non-bookings) and US (United States) classes due to the imbalanced data.  The multilayer perceptron achieves best performance primarily by better distinguishing the non-bookings class (note higher contrast), but all models struggle to discriminate bookings in non-US countries.
+<font size="2"><b>Figure 5.</b> Confusion matrices for each of the three models. Shading indicates the predicted probability of each country destination (x-axis) by actual destination (y-axis).  Correct responses are on the diagnoal from upper left to lower right.  The models generally overpredict the NDF (non-bookings) and US (United States) classes due to the imbalanced data.  The multilayer perceptron achieves best performance primarily by better distinguishing the non-bookings class (note higher contrast), but all models struggle to discriminate bookings in non-US countries.
 </font>
 </p>
 
@@ -71,7 +71,7 @@ XGBoost is a tree ensembling method that learns a set of decision trees by askin
 
 ![Figure 6]({{ site.baseurl }}/images/xgb_feature_importance_barh.png "XGB_feature_importance.")
 <p align="center">
-    <font size="2"><b>Figure 5.</b> Feature importance ratings obtained from XGBoost.  Larger values indicate that a feature promoted greater reductions in impurity.  </font>
+    <font size="2"><b>Figure 6.</b> Feature importance ratings obtained from XGBoost.  Larger values indicate that a feature promoted greater reductions in impurity.  </font>
 </p>
 
 ## Artificial neural network: Multi-layer perceptron
