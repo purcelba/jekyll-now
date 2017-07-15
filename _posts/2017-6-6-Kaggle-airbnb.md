@@ -49,14 +49,12 @@ XGBoost is a tree ensembling method that learns a set of decision trees by askin
 
 ![Figure 5]({{ site.baseurl }}/images/xgb_feature_importance_barh.png "Age bins.")
 
-![Figure 6]({{ site.baseurl }}/images/pBook_age_bins.png "Age bins.")
-
 ## Artificial neural network: Multi-layer perceptron
 Multi-layer perceptrons (MLP) are a class of feedforward neural network models that learns combinations of features to transform the data into a space where they become lineary separable.  These models are very powerful, but  highly parameterized and require careful training for good results.  I trained the model using mini-batch stochastic gradient descent implemented in Keras with a TensorFlow backend.  To efficiently select hyperparameters, I implemented a randomized search with 5-fold cross validation in parallel on a high-performance computing cluster.  The trained network outperformed both logistic regression and boosted trees on the holdout set (auROC = 0.74).  This algorithm would be a great choice for situations in which high accuracy is paramount, but long training times are not an issue.  
 
 ![Figure 7]({{ site.baseurl }}/images/airbnb_conf_mat.png "Confusion matrices.")
 
-![Figure 8]({{ site.baseurl }}/images/auROC.png)
+![Figure 8]({{ site.baseurl }}/images/auROC.png "auROC.")
 
 
 # Conclusions
