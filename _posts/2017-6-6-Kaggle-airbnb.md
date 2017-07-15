@@ -56,7 +56,7 @@ Multi-layer perceptrons (MLP) are a class of feedforward neural network models t
 
 ![Figure 7]({{ site.baseurl }}/images/airbnb_conf_mat.png "Confusion matrices.")
 
-![Figure 8]({{ site.baseurl }}/images/auROC.png "auROC histogram.")
+![Figure 8]({{ site.baseurl }}/images/auROC.png "auROC histogram." width="10")
 
 
 # Conclusions
@@ -65,7 +65,7 @@ I used a variety of machine-learning approaches to predict where users will book
 
 For this data set, the XGB and MLP algorithms that used nonlinear decision rules outperformed the linear model.  The XGB model was particularly impressive since the time necessary for fitting was quite fast.  The MLP model provided the best performance, but took considerably longer to train.  The long training times were greatly reduced by parallelization on a computing cluster (<5 hours total, up to 300 samples in parallel), making this an attractive option if a cluster is available.
 
-Using the MLP model, my final NDSG score on the Kaggle private leaderboard was 0.88209 - close to the winning score of 0.88697 (range = 0 to 1).  The top models in this competition stacked and ensembled up to 15 models (see interviews with the [2nd](http://blog.kaggle.com/2016/03/17/airbnb-new-user-bookings-winners-interview-2nd-place-keiichi-kuroyanagi-keiku/) and [3rd](http://blog.kaggle.com/2016/03/07/airbnb-new-user-bookings-winners-interview-3rd-place-sandro-vega-pons/) place finisheres).  I explored one simple stacking model using predictions of the binary linear classifier as a feature, which produced slight improvement in prediction accuracy. Complex stacking of many models is often impractical in many business applications, but it may be useful for cases in which small gains in accuracy translate to substantial real-world gains.
+Using the MLP model, my final NDSG score on the Kaggle private leaderboard was 0.88209 - close to the winning score of 0.88697 (range = 0 to 1).  The top models in this competition stacked and ensembled up to 15 models (see interviews with the [2nd](http://blog.kaggle.com/2016/03/17/airbnb-new-user-bookings-winners-interview-2nd-place-keiichi-kuroyanagi-keiku/) and [3rd](http://blog.kaggle.com/2016/03/07/airbnb-new-user-bookings-winners-interview-3rd-place-sandro-vega-pons/) place finishers).  I explored one simple stacking model using predictions of the binary linear classifier as a feature, which produced slight improvement in prediction accuracy. Complex stacking of many models is often impractical in many business applications, but it may be useful for cases in which small gains in accuracy translate to substantial real-world gains.
 
 
 
