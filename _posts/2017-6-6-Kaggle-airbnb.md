@@ -34,7 +34,7 @@ For the binary classification, I used L1-regularized logistic regression because
 
 The logistic regression model accurately predicted whether or not a user would book a destination for 71.4% of the holdout dataset, which exceeds chance (62% in the holdout set).  Accordingly, the auROC curve was 0.75.  The resulting coefficients provide insight about which users will book a destination (Figure 4). For example, users who reach Airbnb via a particular web page (actual URL concealed) or use a Mac Desktop are more likely to book a destination.  Conversely, disengaged users that failed to provide demographic information like gender and age were less likely to book.
 
-![Figure 4]({{ site.baseurl }}/images/beta_coefficient_histogram.png "Coefficient histogram.")
+![Figure 4]({{ site.baseurl }}/images/beta_cofficient_histogram.png "Betas.")
 
 
 # Predicting booking destinations: 
