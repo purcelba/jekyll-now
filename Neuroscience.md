@@ -23,7 +23,7 @@ I developed neural computational models of decision making.  My models used actu
 
 ![Figure 1]({{ site.baseurl }}/images/gated_accumulator.png "Gated accumulator model."){: .center-image }
 <p align="center">
-<font size="2"><b>Figure 1.</b> Using actual neural data to generate input to decision-making networks.  Check out the <a href = "https://github.com/purcelba/gated_accumulator_model">gated_accumulator_model</a> repository or <a href = "https://github.com/purcelba/purcelba.github.io/blob/master/docs/PurcellHeitzCohenSchallLoganPalmeri2010.pdf">Purcell et al. 2010</a> for more details.
+<font size="2"><b>Figure 1.</b> Using actual neural data to generate input to decision-making networks.  Check out the <a href = "https://github.com/purcelba/gated_accumulator_model">gated_accumulator_model</a> repository or <a href = "https://github.com/purcelba/purcelba.github.io/blob/master/docs/PurcellHeitzCohenSchallLoganPalmeri2010.pdf">Purcell et al. 2010</a> for more details.</font>
 </p>
 
 ### Papers
