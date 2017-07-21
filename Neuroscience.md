@@ -51,8 +51,6 @@ I combined human psychophysical experiments, computational models of behavior, a
 <font size="2"><b>Figure 2.</b> Decision errors slow us down (Left).  We found that neural activity in parietal cortex also changes (Middle).  Our computational modeling explains why this happens (Right).  Check out <a href = "https://github.com/purcelba/purcelba.github.io/blob/master/docs/PurcellKiani2016a.pdf">Purcell & Kiani (2016)</a> for more details.</font>
 </p>
 
-
-
 ### Paper
 - Purcell, B. A., & Kiani, R. (2016). Neural mechanisms of post-error adjustments of decision policy in parietal cortex. Neuron, 89(3), 658-671.[pdf](https://github.com/purcelba/purcelba.github.io/blob/master/docs/PurcellKiani2016a.pdf)
 
@@ -65,11 +63,15 @@ I combined human psychophysical experiments, computational models of behavior, a
 
 ___
 
-I developed a new computational model to understand how the brain flexibly changes the decision strategy in a dynamic environment.  When our choices produce errors, we need to decide whether the mistake was the result of poor information or a bad strategy - i.e, am I making the wrong moves or am I just being dealt bad hands?  To optimally decide when the strategy must change, we should treat negative outcomes as evidence that for a bad strategy and weight it by our confidence in the choice.  I developed a model that showed how the brain could use simple computations to implement this approach.  I tested the models behavioral predictions with a  human psychophysics experiment. I show that the model accurately predicts human behavior and quantitatively outperforms plausible alternatives. I am currently conducting experiments in non-human primates to test the models predictions about neural mechanisms.  
+I developed a new computational model to understand how the brain flexibly changes the decision strategy in a dynamic environment.  When our choices produce errors, we need to decide whether the mistake was the result of poor information or a bad strategy - i.e, am I making the wrong moves or am I just being dealt bad hands?  To optimally decide when the strategy must change, we should treat negative outcomes as evidence that for a bad strategy and weight it by our choice confidence.  I developed a model that showed how the brain could use simple computations to implement this approach.  I tested the models behavioral predictions with a  human psychophysics experiment. I show that the model accurately predicts human behavior and quantitatively outperforms plausible alternatives. I am currently conducting experiments in non-human primates to test the models predictions about neural mechanisms.  
+
+![Figure 3]({{ site.baseurl }}/images/cngenv.png "Changing environment."){: .center-image }
+<p align="center">
+<font size="2"><b>Figure 2.</b> A computational model explains decisions based on a visual stimulus and strategy about how to report the decision. (Left) Stronger visual information leads to greater accuracy.  (Middle) Subjects are more likely to change strategies when choices associated with greater evidence (i.e., higher confidence) cause negative feedback. (Right) A model explains how accumulation of visual evidence maps to confidence, which in turn provides evidence for changes of strategy.  See <a href = "https://github.com/purcelba/purcelba.github.io/blob/master/docs/PurcellKiani2016b.pdf">Purcell & Kiani (2016b)</a> for more details.</font>
+</p>
 
 ### Paper:
 - Purcell, B. A., & Kiani, R. (2016). Hierarchical decision processes that operate over distinct timescales underlie choice and changes in strategy. Proceedings of the National Academy of Sciences, 113(31), E4531-E4540.[pdf](https://github.com/purcelba/purcelba.github.io/blob/master/docs/PurcellKiani2016b.pdf)
-
 
 ### In the news
 - [Neuroscience News](http://neurosciencenews.com/confidence-neuroscience-error-4705/)
@@ -79,28 +81,30 @@ I developed a new computational model to understand how the brain flexibly chang
 ___
 ## Neurophysiological representations of visual salience
 
-I recorded activity from neurons in medial and lateral frontal cortex of monkeys trained to perform a visual search task in which they located a target item among distractors (e.g., red circle among green circles).  I used ROC curves and other analyses to quantify the information about object identity carried by individual neurons.  I found that lateral frontal cortex robustly represents the location of the target, but medial frontal corext did not.  Instead, medial frontal cortex seems to play a distinct role in signaling positive and negative feedback.
+In two studies, I recorded activity from neurons in medial and lateral frontal cortex of monkeys trained to perform a visual search task in which they located a target item among distractors (e.g., red circle among green circles).  I used auROC curves and other analyses to quantify the information about object identity carried by individual neurons.  I found that lateral frontal cortex robustly represents the location of the target, but medial frontal corext did not.  Instead, medial frontal cortex seems to play a distinct role in signaling negative feedback.
 
-**Collaborators:** Polly Weigand, Jeffrey Schall (Vanderbilt University)
+**Collaborators:** Polly Weigand, Jeffrey Schall, Richard Heitz, Jeremiah Cohen (Vanderbilt University)
 
-### Paper
+![Figure 4]({{ site.baseurl }}/images/sef.png "SEF and FEF."){: .center-image }
+<p align="center">
+<font size="2"><b>Figure 4.</b> (Left) Example neurons from lateral and medial frontal cortex.  Only the lateral neuron signals the target location (red shading).  (Middle) An auROC analysis indicates that lateral neurons signal significantly more information about target location. (Right) Medial frontal neurons signal the occurrence of errors instead of target location.  See <a href = "https://github.com/purcelba/purcelba.github.io/blob/master/docs/PurcellWeigandSchall2012.pdf">Purcell et al. (2012)</a> for more details.</font>
+</p>
+
+### Papers
 - Purcell, B. A., Weigand, P. K., & Schall, J. D. (2012). Supplementary eye field during visual search: salience, cognitive control, and performance monitoring. Journal of Neuroscience, 32(30), 10273-10285.[pdf](https://github.com/purcelba/purcelba.github.io/blob/master/docs/PurcellWeigandSchall2012.pdf)
-
-
-___
-I analyzed the trial-by-trial variance of neural activity in lateral prefrontal cortex during visual search. I found that changing the behavioral significance of the object in a cell's response field has little effect on the neural variance.  Instead, neural variance decreased before eye movements, consistent with convergence of neural populations to a fixed state to trigger shifts of gaze.  
-
-**Collaborators:** Jeffrey Schall, Richard Heitz, Jeremiah Cohen (Vanderbilt University)
-
-### Paper
 - Purcell, B. A., Heitz, R. P., Cohen, J. Y., & Schall, J. D. (2012). Response variability of frontal eye field neurons modulates with sensory input and saccade preparation but not visual search salience. Journal of neurophysiology, 108(10), 2737-2750.[pdf](https://github.com/purcelba/purcelba.github.io/blob/master/docs/PurcellHeitzCohenSchall2012.pdf)
 
 ___
 ## Homologous neural mechanisms of visual attention and working memory in humans and non-human primates
 
-I collaborated with Goeff Woodman to conduct two studies of electroencephalogram (EEG) signals - brain activity recorded from the surface of the head in humans that can be used to index cognitive states.  My work helped to establish a non-human primate model of EEG components associated with visual attention and working memory.  By pairing EEG from outside the skull with recordings of neural activity from inside the brain, we could study how neural populations give rise to observed EEG.  My work showed how frontal cortex indirectly contributes to the generation of attention- and memory-related EEG signals.  You can read more about this work in the papers below or check out [Geoff's website](http://www.psy.vanderbilt.edu/faculty/woodman/) for more information about his awesome work.
+I collaborated with Goeff Woodman to conduct two studies of electroencephalogram (EEG) signals - brain activity recorded from the surface of the head in humans that can be used to index cognitive states.  My work helped to establish a non-human primate model of EEG components associated with visual attention and working memory.  By pairing EEG from outside the skull with recordings of neural activity from inside the brain, we could study how neural populations give rise to observed EEG.  My work showed how frontal cortex indirectly contributes to the generation of attention and memory related EEG signals.  You can read more about this work in the papers below or check out [Geoff's website](http://www.psy.vanderbilt.edu/faculty/woodman/) for more information about his awesome work.
 
 **Collaborators:** Geoff Woodman, Rob Reihardt, Jeffrey Schall, Richard Heitz, Polly Weigand (Vanderbilt University)
+
+![Figure 5]({{ site.baseurl }}/images/eeg.png "FEF and EEG."){: .center-image }
+<p align="center">
+<font size="2"><b>Figure 5.</b> Example neuron (top, blue), local field potential (middle, green), and EEG (bottom, red) recorded from a macaque monkey performing a visual search task.  All three signals indicate the location of the search target. See <a href = "https://github.com/purcelba/purcelba.github.io/blob/master/docs/PurcellSchallWoodman2013.pdf">Purcell et al. (2013)</a> for more details.</font>
+</p>
 
 ### Papers
 - Purcell, B. A., Schall, J. D., & Woodman, G. F. (2013). On the origin of event-related potentials indexing covert attentional selection during visual search: timing of selection by macaque frontal eye field and event-related potentials during pop-out search. Journal of neurophysiology, 109(2), 557-569.[pdf](https://github.com/purcelba/purcelba.github.io/blob/master/docs/PurcellSchallWoodman2013.pdf)
@@ -110,9 +114,13 @@ ___
 
 ## Evaluating methods for measuring and visualizing human similarity judgments
 
-As an undergraduate, I evaluated methods for visualizing the structure of human categorization of colors and personality traits.   I collected human similarity judgments of color and personality trait stimuli using a "sort-and-merge" procedure in which subjects grouped stimuli into clusters based on their perceived similarity and subsequently merged the clusters based their overall group similarity.  I visualized the resulting similarity structure using an multidimensional scaling (MDS) procedrue.  I assessed the internal validity of the procedure using percent variance explained.  I evaluated the external validity of the procedure by comparing the shape of the solution to "ground truth" dataset obtained using pairwise similarity judgments for the same stimuli.   I found that the sort-and-merge procedure could capture the structure of judgments quite well, establishing it as a cheaper and less time-consuming alternative to pairwise judgments for measuring human categorization.
-
+As an undergraduate, I evaluated methods for visualizing the structure of human categorization of colors and personality traits.   I collected human similarity judgments of color and personality trait stimuli using a "sort-and-merge" procedure in which subjects grouped stimuli into clusters based on their perceived similarity and subsequently merged the clusters based their overall group similarity.  I visualized the resulting similarity structure using an multidimensional scaling (MDS) procedrue.  I assessed the internal validity of the procedure using percent variance explained and the external validity of the procedure by comparing the shape of the solution to a "ground truth" dataset obtained using pairwise similarity judgments.   I found that the sort-and-merge procedure could capture the structure of judgments quite well, establishing it as a cheaper and less time-consuming alternative to pairwise judgments for measuring human categorization.
 
 
 **Collaborator:** Robin Thomas (Miami University)
+
+![Figure 6]({{ site.baseurl }}/images/mds.png "MDS."){: .center-image }
+<p align="center">
+<font size="2"><b>Figure 6.</b> First two dimensions of the MDS solution for personality trait data collected with sort-and-merge procedure compared to pairwise similarity judgments. Both methods generally agree and reveal the structure of human categorization.
+</p>
 
