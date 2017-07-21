@@ -46,6 +46,13 @@ I combined human psychophysical experiments, computational models of behavior, a
 
 **Collaborator:** Roozbeh Kiani (New York University)
 
+![Figure 2]({{ site.baseurl }}/images/pes.png "Post-error slowing."){: .center-image }
+<p align="center">
+<font size="2"><b>Figure 2.</b> Decision errors slow us down (Left).  We found that neural activity in parietal cortex also changes (Middle).  Our computational modeling explains why this happens (Right).  Check out <a href = "https://github.com/purcelba/purcelba.github.io/blob/master/docs/PurcellKiani2016a.pdf">Purcell & Kiani (2016)</a> for more details.</font>
+</p>
+
+
+
 ### Paper
 - Purcell, B. A., & Kiani, R. (2016). Neural mechanisms of post-error adjustments of decision policy in parietal cortex. Neuron, 89(3), 658-671.[pdf](https://github.com/purcelba/purcelba.github.io/blob/master/docs/PurcellKiani2016a.pdf)
 
