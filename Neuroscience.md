@@ -3,7 +3,7 @@ layout: page
 title: Neuroscience research
 permalink: /Neuroscience/
 ---
-I study how the brain integrates diverse types of information (e.g., sensory, rewards, expectations, context) to make decisions and how our decision process can flexibly adapt to accomplish our goals.  To do this, I combine computational modeling, behavioral studies in humans and nonhuman primates, and neurophysiological recording and manipulation.  I use model-based approaches and machine-learning algorithms to predict choices based on experience and neural states and to test hypotheses about the underlying network mechanisms.
+I study how the brain integrates diverse types of information (e.g., sensory, rewards, expectations, context) to make decisions.  To do this, I combine computational modeling, behavioral studies in humans and nonhuman primates, and neurophysiological recording and manipulation.  I use model-based approaches and machine-learning algorithms to predict choices based on experience and neural activity that allow me to test hypotheses about underlying network mechanisms.
 
 ___
 
@@ -20,6 +20,11 @@ ___
 I developed neural computational models of decision making.  My models used actual neurophysiological activity recorded from macaque monkeys making visual decisions as input to simple artificial neural networks.  The models predicted the monkeys's choices and response times and replicated the dynamics of actual neural populations.  I showed how new model architectures can improve prediction accuracy and predict model dynamics consistent with observed neural responses.   You can find an overview the modeling framework and sample code in the [gated_accumulator_model](https://github.com/purcelba/gated_accumulator_model) repository or read more about the details in the papers listed below.
 
 **Collaborators:** Thomas Palmeri, Jeffrey Schall, Gordon Logan, Richard Heitz, Jeremiah Cohen (Vanderbilt University)
+
+![Figure 1]({{ site.baseurl }}/images/gated_accumulator.png "Gated accumulator model.")
+<p align="center">
+<font size="2"><b>Figure 1.</b> Using actual neural data to generate input to decision-making networks.  Check out the [gated_accumulator_model](https://github.com/purcelba/gated_accumulator_model) repository or [Purcell et al., 2010](https://github.com/purcelba/purcelba.github.io/blob/master/docs/PurcellHeitzCohenSchallLoganPalmeri2010.pdf) for more details .</font>
+</p>
 
 ### Papers
 - Purcell, B. A., Heitz, R. P., Cohen, J. Y., Schall, J. D., Logan, G. D., & Palmeri, T. J. (2010). Neurally constrained modeling of perceptual decision making. Psychological review, 117(4), 1113.[pdf](https://github.com/purcelba/purcelba.github.io/blob/master/docs/PurcellHeitzCohenSchallLoganPalmeri2010.pdf)
