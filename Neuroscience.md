@@ -15,7 +15,7 @@ I use state-of-the-art electrophysiology techniques to simultaneously record act
 
 ![Figure 1]({{ site.baseurl }}/images/gpfa_example.png "GPFA example."){: .center-image }
 <p align="center">
-<font size="2"><b>Figure 1.</b> (Left) I used Gaussian-Process Factor Analysis [Yu et al., 2009](https://www.ncbi.nlm.nih.gov/pubmed/19357332) to reduce the dimensionality of neural population responses over time.  Projecting the population responses onto two dimensions shows that the population evolves to signal the upcoming choice, but the magnitude of discrimination depends on the difficulty of the decision.  (Right) A linear classifier trained on 20 dimensions (~80% variance explained) can decode the upcoming choices with high accuracy as the decision evolves.</font>
+<font size="2"><b>Figure 1.</b> (Left) I used Gaussian-Process Factor Analysis <a href = "https://www.ncbi.nlm.nih.gov/pubmed/19357332">Yu et al. (2009)</a> to reduce the dimensionality of neural population responses over time.  Projecting the population responses onto two dimensions shows that the population evolves to signal the upcoming choice, but the magnitude of discrimination depends on the difficulty of the decision.  (Right) A linear classifier trained on 20 dimensions (~80% variance explained) can decode the upcoming choices with high accuracy as the decision evolves.</font>
 </p>
 
 ___
