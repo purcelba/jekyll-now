@@ -126,6 +126,6 @@ As an undergraduate, I evaluated methods for visualizing the structure of human 
 
 ![Figure 7]({{ site.baseurl }}/images/mds.png "MDS."){: .center-image }
 <p align="center">
-<font size="2"><b>Figure 7.</b> First two dimensions of the MDS solution for personality trait data collected with sort-and-merge procedure compared to pairwise similarity judgments. Both methods generally agree and reveal the structure of human categorization.
+    <font size="2"><b>Figure 7.</b> First two dimensions of the MDS solution for personality trait data collected with sort-and-merge procedure compared to pairwise similarity judgments. Both methods generally agree and reveal the structure of human categorization.</font>
 </p>
 
