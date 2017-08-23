@@ -9,7 +9,7 @@ ___
 
 ## Predicting choices from large-scale neural recordings
 
-I use state-of-the-art electrophysiology technology to simultaneously record activity from hundreds of neurons in multiple areas of the primate brain.  Neural activity is recorded while monkeys make decisions based on visual information and learned reward contingencies.  I use dimensionality reduction methods to visualize the evolution neural states during decision formation. I use maching- learning algorithms to decode the information represented in different brain region and to accurately predict the upcoming choices. I study the correlation structure of signals within and across areas to to understand neural interactions within and across brain areas.  In addition, I inject small amounts of electrical current to understand how perturbation of different brain areas influences the decision. My results from this project will be presented at the [Society for Neuroscience Annual Meeting](https://www.sfn.org/annual-meeting/neuroscience-2017) this fall.
+I use state-of-the-art electrophysiology technology to simultaneously record activity from hundreds of neurons in multiple areas of the primate brain.  Neural activity is recorded while monkeys make decisions based on visual information and learned reward contingencies.  I use dimensionality reduction methods to visualize the evolution neural states during decision formation. I use maching- learning algorithms to decode the information represented in different brain region and to predict the upcoming choices. I study the correlation structure of signals within and across areas to to understand neural interactions.  My results from this project will be presented at the [Society for Neuroscience Annual Meeting](https://www.sfn.org/annual-meeting/neuroscience-2017) this fall.
 
 **Collaborator:** Roozbeh Kiani (New York University)
 
@@ -22,7 +22,7 @@ ___
 
 ## Neural models of decision making
 
-I developed neural computational models of decision making.  My models used actual neurophysiological activity recorded from macaque monkeys making visual decisions as input to simple artificial neural networks.  The models predicted the monkeys's choices and response times and replicated the dynamics of actual neural populations.  I showed how new model architectures can improve prediction accuracy and predict model dynamics consistent with observed neural responses.   You can find an overview the modeling framework and sample code in the [gated_accumulator_model](https://github.com/purcelba/gated_accumulator_model) repository or read more about the details in the papers listed below.
+I developed neural computational models of decision making.  My models used neural time-series data recorded from macaque monkeys making visual decisions as input to simple artificial neural networks.  The models predicted the monkeys's choices and response times and replicated the dynamics of actual neural populations.  I showed how new model architectures can improve prediction accuracy and predict model dynamics consistent with observed neural responses.   You can find an overview the modeling framework and sample code in the [gated_accumulator_model](https://github.com/purcelba/gated_accumulator_model) repository or read more about the details in the papers listed below.
 
 **Collaborators:** Thomas Palmeri, Jeffrey Schall, Gordon Logan, Richard Heitz, Jeremiah Cohen (Vanderbilt University)
 
