@@ -3,19 +3,19 @@ layout: page
 title: Neuroscience research
 permalink: /Neuroscience/
 ---
-I study how the brain combines diverse types of information and expectations to make decisions.  To do this, I combine computational modeling, behavioral studies in humans and nonhuman primates, and neurophysiological recording and manipulation.  I use model-based approaches and machine-learning algorithms to predict choices based on experience and neural activity that allow me to test hypotheses about underlying network mechanisms.
+I study how the brain combines diverse types of information and expectations to make decisions.  To do this, I combine computational modeling, behavioral studies in humans and nonhuman primates, and neurophysiological recordings.  I use machine-learning algorithms to predict choices based on past experience and neural activity.  These models allow me to test hypotheses about the underlying network mechanisms.
 
 ___
 
-## Large-scale recordings of neural populations
+## Predicting choices from large-scale neural recordings
 
-I use state-of-the-art electrophysiology techniques to simultaneously record activity from large neural populations from multiple areas of the primate brain.  Activity from hudreds of neurons in the frontal and parietal cortex are recorded in monkeys making decisions.  I use dimensionality reduction methods to visualize the evolution of neural populations throughout decision formation. I use maching- learning algorithms to decode the information represented in different brain region and to make accurate predictions about the animal's upcoming choices. I study the correlation structure of signals within and across areas to to understand neural interactions within and across brain areas.  In addition, I inject small amounts of electrical current into different brain areas to understand how perturbation of the neural population state influences decisions at the behavioral and neural level. My results from this project will be presented at the [Society for Neuroscience Annual Meeting](https://www.sfn.org/annual-meeting/neuroscience-2017) this fall.
+I use state-of-the-art electrophysiology technology to simultaneously record activity from hundreds of neurons in multiple areas of the primate brain.  Neural activity is recorded while monkeys make decisions based on visual information and learned reward contingencies.  I use dimensionality reduction methods to visualize the evolution neural states during decision formation. I use maching- learning algorithms to decode the information represented in different brain region and to accurately predict the upcoming choices. I study the correlation structure of signals within and across areas to to understand neural interactions within and across brain areas.  In addition, I inject small amounts of electrical current to understand how perturbation of different brain areas influences the decision. My results from this project will be presented at the [Society for Neuroscience Annual Meeting](https://www.sfn.org/annual-meeting/neuroscience-2017) this fall.
 
 **Collaborator:** Roozbeh Kiani (New York University)
 
 ![Figure 1]({{ site.baseurl }}/images/gpfa_example.png "GPFA example."){: .center-image }
 <p align="center">
-<font size="2"><b>Figure 1.</b> (Left) I used Gaussian-Process Factor Analysis <a href = "https://www.ncbi.nlm.nih.gov/pubmed/19357332">(Yu et al., 2009)</a> to reduce the dimensionality of neural population responses over time.  Projecting the population responses onto two dimensions shows that the population evolves to signal the upcoming choice, but the magnitude of discrimination depends on the difficulty of the decision.  (Right) A linear classifier trained on 20 dimensions (~80% variance explained) can decode the upcoming choices with high accuracy as the decision evolves.</font>
+<font size="2"><b>Figure 1.</b> (Left) I used unsupervised dimensionality reduction techniques <a href = "https://www.ncbi.nlm.nih.gov/pubmed/19357332">(Yu et al., 2009)</a> to visualize the evolution of neural states over time.  The network evolves to signal the upcoming choice, and the signal is stronger for easier decisions.  (Right) A linear classifier trained on 20 dimensions can decode the upcoming choice with >95% accuracy (cross-validated).</font>
 </p>
 
 ___
@@ -68,7 +68,7 @@ I combined human psychophysical experiments, computational models of behavior, a
 
 ___
 
-I developed a new computational model to understand how the brain flexibly changes the decision strategy in a dynamic environment.  When our choices produce errors, we need to decide whether the mistake was the result of poor information or a bad strategy - i.e, am I making the wrong moves or am I just being dealt bad hands?  To optimally decide when the strategy must change, we should treat negative outcomes as evidence that for a bad strategy and weight it by our choice confidence.  I developed a model that showed how the brain could use simple computations to implement this approach.  I tested the models behavioral predictions with a  human psychophysics experiment. I show that the model accurately predicts human behavior and quantitatively outperforms plausible alternatives. I am currently conducting experiments in non-human primates to test the models predictions about neural mechanisms.  
+I developed a new computational model to understand flexible decision making in a dynamic environments.  In a changing environment, we must decide whether errors result from poor choices or a changes in the underlying environment.  The Bayes optimal solution to this task is to treat negative outcomes as evidence that for a change of environment and to weight that evidence by the confidence in our choice.  I developed a model that showed how humans can approximate the optimal solution to detect changes in the environment and developed a  human psychophysics experiment to test the model predictions. I show that the model accurately predicts human behavior and quantitatively outperforms plausible alternatives. I am currently conducting experiments in non-human primates to test the models predictions about neural mechanisms.  
 
 ![Figure 4]({{ site.baseurl }}/images/cngenv.png "Changing environment."){: .center-image }
 <p align="center">
@@ -102,7 +102,7 @@ In two studies, I recorded activity from neurons in medial and lateral frontal c
 ___
 ## Homologous neural mechanisms of visual attention and working memory in humans and non-human primates
 
-I collaborated with Goeff Woodman to conduct two studies of electroencephalogram (EEG) signals - brain activity recorded from the surface of the head in humans that can be used to index cognitive states.  My work helped to establish a non-human primate model of EEG components associated with visual attention and working memory.  By pairing EEG from outside the skull with recordings of neural activity from inside the brain, we could study how neural populations give rise to observed EEG.  My work showed how frontal cortex indirectly contributes to the generation of attention and memory related EEG signals.  You can read more about this work in the papers below or check out [Geoff's website](http://www.psy.vanderbilt.edu/faculty/woodman/) for more information about his awesome work.
+I collaborated with Goeff Woodman to conduct two studies of electroencephalogram (EEG) signals - brain activity recorded from the surface of the head in humans that can be used to index cognitive states.  My work helped to establish a non-human primate model of EEG components associated with visual attention and working memory.  By pairing EEG from outside the skull with recordings of neural activity from inside the brain, we could study how neural populations give rise to observed EEG.  We showed how frontal cortex indirectly contributes to the generation of attention and memory related EEG signals.  You can read more about this work in the papers below or check out [Geoff's website](http://www.psy.vanderbilt.edu/faculty/woodman/) for more information about his awesome work.
 
 **Collaborators:** Geoff Woodman, Rob Reihardt, Jeffrey Schall, Richard Heitz, Polly Weigand (Vanderbilt University)
 

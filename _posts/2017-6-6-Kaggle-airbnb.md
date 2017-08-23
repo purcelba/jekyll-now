@@ -11,7 +11,7 @@ Airbnb is an online marketplace that enables people to lease or rent short-term 
 
 # Data overview
 
-The training data set consists of user information collected from 6/28/2010 - 6/30/2014 with the booking destination (target variable) provided (213,451 users).  The goal of the channelge is to preict the booking destination for a test data set collected from 7/1/2014 - 9/30/2014 (62,096 users).  
+The training data set consists of user information collected from 6/28/2010 - 6/30/2014 with the booking destination (target variable) provided (213,451 users).  The goal of the challenge is to predict the booking destination for a test data set collected from 7/1/2014 - 9/30/2014 (62,096 users).  
 
 ![Figure 1]({{ site.baseurl }}/images/airbnb_user_data.png "Example user data.")
 <p align="center">
@@ -84,7 +84,7 @@ Multi-layer perceptrons (MLP) are a class of feedforward neural network models t
 
 # Conclusions
 
-I used a variety of machine-learning approaches to predict where users will book their next destination on Airbnb and to learn the features that are most predictive.  The final model provided ranked predictions about where a new user would book that could be used to prioritize listings shown to users.  Feature selection tools revealed that age, previously visited web sites, and user devices are informative factors in whether a user will book.  These results could inform decisions about where to advertise for new users or to evaluate ongoing advertising campagins.
+I used a variety of machine-learning approaches to predict where users will book their next destination on Airbnb and to learn the features that are most predictive.  The final model provided ranked predictions about where a new user would book that could be used to prioritize listings shown to users.  Feature selection tools revealed that age, previously visited web sites, and user devices are informative factors in whether a user will book.  These results could inform decisions about where to advertise for new users or to evaluate ongoing advertising campaign.
 
 For this data set, the XGB and MLP outperformed the linear model.  The XGB model was particularly impressive since the time necessary for fitting was quite fast.  The MLP model provided the best performance, but took considerably longer to train.  The long training times were greatly reduced by parallelization on a computing cluster (<5 hours total, up to 300 samples in parallel), making this an attractive option if a cluster is available.
 
