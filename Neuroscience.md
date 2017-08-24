@@ -55,11 +55,11 @@ I combined human psychophysical experiments, computational models of behavior, a
 
 ___
 
-I developed a new computational model to understand flexible decision making in a dynamic environments.  In a changing environment, we must decide whether errors result from poor choices or a changes in the underlying environment.  The Bayes optimal solution to this task is to treat negative outcomes as evidence that for a change of environment and to weight that evidence by the confidence in our choice.  I developed a model that showed how humans can approximate the optimal solution to detect changes in the environment and developed a  human psychophysics experiment to test the model predictions. I show that the model accurately predicts human behavior and quantitatively outperforms plausible alternatives. I am currently conducting experiments in non-human primates to test the models predictions about neural mechanisms.  
+I developed a new computational model to understand flexible decision making in a dynamic environments.  In a changing environment, we must decide whether errors result from poor choices or a change in the environment.  The Bayes optimal solution is to treat negative outcomes as evidence that for a change of environment and to weight that evidence by the confidence in our choice.  I developed a model that showed how humans approximate the optimal solution and developed a psychophysics experiment to test the model predictions. I show that the model accurately predicts human choices and quantitatively outperforms plausible alternatives. I am currently recording neural activity from non-human primates to understand how the brain implements these computations.  
 
 ![Figure 3]({{ site.baseurl }}/images/cngenv.png "Changing environment."){: .center-image }
 <p align="center">
-<font size="2"><b>Figure 3.</b> A computational model explains decisions based on a visual stimulus and strategy about how to report the decision. (Left) Stronger visual information leads to greater accuracy.  (Middle) Subjects are more likely to change strategies when choices associated with greater evidence (i.e., higher confidence) cause negative feedback. (Right) A model explains how accumulation of visual evidence maps to confidence, which in turn provides evidence for changes of strategy.  See <a href = "https://github.com/purcelba/purcelba.github.io/blob/master/docs/PurcellKiani2016b.pdf">Purcell & Kiani (2016b)</a> for more details.</font>
+<font size="2"><b>Figure 3.</b> A computational model explains decisions based on a visual information (Left) and changes of environment (Middle).  The model explains how accumulation of visual evidence maps to confidence, which in turn provides evidence for changes of environment (Right).  See <a href = "https://github.com/purcelba/purcelba.github.io/blob/master/docs/PurcellKiani2016b.pdf">Purcell & Kiani (2016b)</a> for more details.</font>
 </p>
 
 ### Paper:
@@ -86,7 +86,7 @@ I use state-of-the-art electrophysiology technology to simultaneously record act
 ___
 ## Neurophysiological representations of visual salience
 
-In two studies, I recorded activity from neurons in medial and lateral frontal cortex of monkeys trained to perform a visual search task in which they located a target item among distractors (e.g., red circle among green circles).  I used auROC curves and other analyses to quantify the information about object identity carried by individual neurons.  I found that lateral frontal cortex robustly represents the location of the target, but medial frontal corext did not.  Instead, medial frontal cortex seems to play a distinct role in signaling negative feedback.
+In two studies, I recorded activity from neurons in medial and lateral frontal cortex of monkeys trained to perform a visual search task in which they located a target item among distractors (e.g., red circle among green circles).  I used auROC curves and other analyses to quantify the information about object identity carried by individual neurons.  I found that lateral frontal cortex robustly represents the location of the target, but medial frontal corext did not.  Instead, medial frontal cortex seems to play a role in signaling feedback.
 
 **Collaborators:** Polly Weigand, Jeffrey Schall, Richard Heitz, Jeremiah Cohen (Vanderbilt University)
 
@@ -102,7 +102,7 @@ In two studies, I recorded activity from neurons in medial and lateral frontal c
 ___
 ## Homologous neural mechanisms of visual attention and working memory in humans and non-human primates
 
-I collaborated with Goeff Woodman to conduct two studies of electroencephalogram (EEG) signals - brain activity recorded from the surface of the head in humans that can be used to index cognitive states.  My work helped to establish a non-human primate model of EEG components associated with visual attention and working memory.  By pairing EEG from outside the skull with recordings of neural activity from inside the brain, we could study how neural populations give rise to observed EEG.  We showed how frontal cortex indirectly contributes to the generation of attention and memory related EEG signals.  You can read more about this work in the papers below or check out [Geoff's website](http://www.psy.vanderbilt.edu/faculty/woodman/) for more information about his awesome work.
+I collaborated with Goeff Woodman to conduct two studies of electroencephalogram (EEG) recordings - brain activity recorded from the surface of the head that can be used to index cognitive states.  My work helped to establish a non-human primate model of EEG components associated with visual attention and working memory.  By pairing EEG from outside the skull with recordings of neural activity from inside the brain, we could study how neural populations give rise to observed EEG.  We showed how frontal cortex indirectly contributes to the generation of attention and memory related EEG signals.  You can read more about this work in the papers below or check out [Geoff's website](http://www.psy.vanderbilt.edu/faculty/woodman/) for more information about his awesome work.
 
 **Collaborators:** Geoff Woodman, Rob Reihardt, Jeffrey Schall, Richard Heitz, Polly Weigand (Vanderbilt University)
 
