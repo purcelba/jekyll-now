@@ -3,32 +3,19 @@ layout: page
 title: Neuroscience research
 permalink: /Neuroscience/
 ---
-I study how the brain combines diverse types of information and expectations to make decisions.  To do this, I combine computational modeling, behavioral studies in humans and nonhuman primates, and neurophysiological recordings.  I use machine-learning algorithms to predict choices based on past experience and neural activity.  These models allow me to test hypotheses about the underlying network mechanisms.
-
-___
-
-## Predicting choices from large-scale neural recordings
-
-I use state-of-the-art electrophysiology technology to simultaneously record activity from hundreds of neurons in multiple areas of the primate brain.  Neural activity is recorded while monkeys make decisions based on visual information and learned reward contingencies.  I use dimensionality reduction methods to visualize the evolution neural states during decision formation. I use maching- learning algorithms to decode the information represented in different brain region and to predict the upcoming choices. I study the correlation structure of signals within and across areas to to understand neural interactions.  My results from this project will be presented at the [Society for Neuroscience Annual Meeting](https://www.sfn.org/annual-meeting/neuroscience-2017) this fall.
-
-**Collaborator:** Roozbeh Kiani (New York University)
-
-![Figure 1]({{ site.baseurl }}/images/gpfa_example.png "GPFA example."){: .center-image }
-<p align="center">
-<font size="2"><b>Figure 1.</b> (Left) I used unsupervised dimensionality reduction techniques <a href = "https://www.ncbi.nlm.nih.gov/pubmed/19357332">(Yu et al., 2009)</a> to visualize the evolution of neural states over time.  The network evolves to signal the upcoming choice, and the signal is stronger for easier decisions.  (Right) A linear classifier trained on 20 dimensions can decode the upcoming choice with >95% accuracy (cross-validated).</font>
-</p>
+I study how the brain combines diverse types of information to make decisions.  I develop models that explain the computations that support decision making and design behavioral experiments to validate model predictions.  I test how the brain could implement those computations by recording from large populations of neurons and use machine-learning algorithms to visualize neural dynamics and predict upcoming choices.  
 
 ___
 
 ## Neural models of decision making
 
-I developed neural computational models of decision making.  My models used neural time-series data recorded from macaque monkeys making visual decisions as input to simple artificial neural networks.  The models predicted the monkeys's choices and response times and replicated the dynamics of actual neural populations.  I showed how new model architectures can improve prediction accuracy and predict model dynamics consistent with observed neural responses.   You can find an overview the modeling framework and sample code in the [gated_accumulator_model](https://github.com/purcelba/gated_accumulator_model) repository or read more about the details in the papers listed below.
+I developed neural computational models of decision making for my PhD thesis.  My models used neural time-series data recorded from macaque monkeys making visual decisions as input to simple artificial neural networks.  The models predicted the monkeys's choices and response times and replicated the dynamics of actual neural populations.  I showed how new model architectures can improve prediction accuracy and predict model dynamics consistent with observed neural responses.   You can find an overview the modeling framework and sample code in the [gated_accumulator_model](https://github.com/purcelba/gated_accumulator_model) repository or read more about the details in the papers listed below.
 
 **Collaborators:** Thomas Palmeri, Jeffrey Schall, Gordon Logan, Richard Heitz, Jeremiah Cohen (Vanderbilt University)
 
-![Figure 2]({{ site.baseurl }}/images/gated_accumulator.png "Gated accumulator model."){: .center-image }
+![Figure 1]({{ site.baseurl }}/images/gated_accumulator.png "Gated accumulator model."){: .center-image }
 <p align="center">
-<font size="2"><b>Figure 2.</b> Using actual neural data to generate input to decision-making networks.  Check out the <a href = "https://github.com/purcelba/gated_accumulator_model">gated_accumulator_model</a> repository or <a href = "https://github.com/purcelba/purcelba.github.io/blob/master/docs/PurcellHeitzCohenSchallLoganPalmeri2010.pdf">Purcell et al. 2010</a> for more details.</font>
+<font size="2"><b>Figure 1.</b> Using actual neural data to generate input to decision-making networks.  Check out the <a href = "https://github.com/purcelba/gated_accumulator_model">gated_accumulator_model</a> repository or <a href = "https://github.com/purcelba/purcelba.github.io/blob/master/docs/PurcellHeitzCohenSchallLoganPalmeri2010.pdf">Purcell et al. 2010</a> for more details.</font>
 </p>
 
 ### Papers
@@ -51,9 +38,9 @@ I combined human psychophysical experiments, computational models of behavior, a
 
 **Collaborator:** Roozbeh Kiani (New York University)
 
-![Figure 3]({{ site.baseurl }}/images/pes.png "Post-error slowing."){: .center-image }
+![Figure 2]({{ site.baseurl }}/images/pes.png "Post-error slowing."){: .center-image }
 <p align="center">
-<font size="2"><b>Figure 3.</b> Decision errors slow us down (Left).  We found that neural activity in parietal cortex also changes (Middle).  Our computational modeling explains why this happens (Right).  Check out <a href = "https://github.com/purcelba/purcelba.github.io/blob/master/docs/PurcellKiani2016a.pdf">Purcell & Kiani (2016)</a> for more details.</font>
+<font size="2"><b>Figure 2.</b> Decision errors slow us down (Left).  We found that neural activity in parietal cortex also changes (Middle).  Our computational modeling explains why this happens (Right).  Check out <a href = "https://github.com/purcelba/purcelba.github.io/blob/master/docs/PurcellKiani2016a.pdf">Purcell & Kiani (2016)</a> for more details.</font>
 </p>
 
 ### Paper
@@ -70,9 +57,9 @@ ___
 
 I developed a new computational model to understand flexible decision making in a dynamic environments.  In a changing environment, we must decide whether errors result from poor choices or a changes in the underlying environment.  The Bayes optimal solution to this task is to treat negative outcomes as evidence that for a change of environment and to weight that evidence by the confidence in our choice.  I developed a model that showed how humans can approximate the optimal solution to detect changes in the environment and developed a  human psychophysics experiment to test the model predictions. I show that the model accurately predicts human behavior and quantitatively outperforms plausible alternatives. I am currently conducting experiments in non-human primates to test the models predictions about neural mechanisms.  
 
-![Figure 4]({{ site.baseurl }}/images/cngenv.png "Changing environment."){: .center-image }
+![Figure 3]({{ site.baseurl }}/images/cngenv.png "Changing environment."){: .center-image }
 <p align="center">
-<font size="2"><b>Figure 4.</b> A computational model explains decisions based on a visual stimulus and strategy about how to report the decision. (Left) Stronger visual information leads to greater accuracy.  (Middle) Subjects are more likely to change strategies when choices associated with greater evidence (i.e., higher confidence) cause negative feedback. (Right) A model explains how accumulation of visual evidence maps to confidence, which in turn provides evidence for changes of strategy.  See <a href = "https://github.com/purcelba/purcelba.github.io/blob/master/docs/PurcellKiani2016b.pdf">Purcell & Kiani (2016b)</a> for more details.</font>
+<font size="2"><b>Figure 3.</b> A computational model explains decisions based on a visual stimulus and strategy about how to report the decision. (Left) Stronger visual information leads to greater accuracy.  (Middle) Subjects are more likely to change strategies when choices associated with greater evidence (i.e., higher confidence) cause negative feedback. (Right) A model explains how accumulation of visual evidence maps to confidence, which in turn provides evidence for changes of strategy.  See <a href = "https://github.com/purcelba/purcelba.github.io/blob/master/docs/PurcellKiani2016b.pdf">Purcell & Kiani (2016b)</a> for more details.</font>
 </p>
 
 ### Paper:
@@ -82,6 +69,19 @@ I developed a new computational model to understand flexible decision making in 
 - [Neuroscience News](http://neurosciencenews.com/confidence-neuroscience-error-4705/)
 - [Eureka Alert](https://www.eurekalert.org/pub_releases/2016-07/nyu-iga071416.php)
 - [Science Daily](https://www.sciencedaily.com/releases/2016/07/160718161503.htm)
+
+___
+
+## Predicting choices from large-scale neural recordings
+
+I use state-of-the-art electrophysiology technology to simultaneously record activity from hundreds of neurons in multiple areas of the primate brain.  I record neural activity while monkeys make decisions based on visual information and learned reward contingencies.  I use dimensionality reduction methods to visualize the evolution neural states during decision formation. I use linear classifiers to decode the information represented in different brain region and to predict the upcoming choices. I study the correlation structure of signals within and across areas to to understand neural interactions.  My results from this project will be presented at the [Society for Neuroscience Annual Meeting](https://www.sfn.org/annual-meeting/neuroscience-2017) this fall.
+
+**Collaborator:** Roozbeh Kiani (New York University)
+
+![Figure 4]({{ site.baseurl }}/images/gpfa_example.png "GPFA example."){: .center-image }
+<p align="center">
+<font size="2"><b>Figure 4.</b> (Left) I used unsupervised dimensionality reduction techniques <a href = "https://www.ncbi.nlm.nih.gov/pubmed/19357332">(Yu et al., 2009)</a> to visualize the evolution of neural states over time.  The network evolves to signal the upcoming choice, and the signal is stronger for easier decisions.  (Right) A linear classifier trained on 20 dimensions can decode the upcoming choice with >95% accuracy (cross-validated).</font>
+</p>
 
 ___
 ## Neurophysiological representations of visual salience
