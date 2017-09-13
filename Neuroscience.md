@@ -3,13 +3,13 @@ layout: page
 title: Neuroscience research
 permalink: /Neuroscience/
 ---
-I study how the brain combines diverse types of information to make decisions.  I develop models that explain the computations that support decision making and design behavioral experiments to validate model predictions.  I test how the brain could implement those computations by recording from large populations of neurons and use machine-learning algorithms to visualize neural dynamics and predict upcoming choices.  
+I study how the brain combines diverse types of information to make decisions.  I develop models that explain the computations that support decision making and design behavioral experiments to validate model predictions.  I test how the brain could implement those computations by recording from large populations of neurons and use machine-learning algorithms to visualize neural states and predict upcoming choices.  
 
 ___
 
 ## Neural models of decision making
 
-I developed neural computational models of decision making for my PhD thesis.  My models used neural time-series data recorded from macaque monkeys making visual decisions as input to simple artificial neural networks.  The models predicted the monkeys's choices and response times and replicated the dynamics of actual neural populations.  I showed how new model architectures can improve prediction accuracy and predict model dynamics consistent with observed neural responses.   You can find an overview the modeling framework and sample code in the [gated_accumulator_model](https://github.com/purcelba/gated_accumulator_model) repository or read more about the details in the papers listed below.
+I developed neural computational models of decision making for my PhD thesis.  My models use neural time-series data recorded from macaque monkeys making visual decisions as input to simple artificial neural networks.  The models predict the monkeys's choices and response times and replicat the dynamics of actual neural populations.  I showed how new model architectures can improve prediction accuracy and predict model dynamics consistent with observed neural responses.   You can find an overview the modeling framework and sample code in the [gated_accumulator_model](https://github.com/purcelba/gated_accumulator_model) repository or read more about the details in the papers listed below.
 
 **Collaborators:** Thomas Palmeri, Jeffrey Schall, Gordon Logan, Richard Heitz, Jeremiah Cohen (Vanderbilt University)
 
