@@ -55,7 +55,9 @@ I combined human psychophysical experiments, computational models of behavior, a
 
 ___
 
-I developed a new computational model to understand flexible decision making in a dynamic environment.  In a changing environment, we must decide whether errors result from poor choices or a change in the environment.  The Bayes optimal solution is to treat negative outcomes as evidence that for a change of environment and to weight that evidence by the confidence in our choice.  I developed a model that showed how humans could approximate the optimal solution using very simple computations and developed a psychophysics experiment to test the model predictions. I showed that the model accurately predicts human choices and quantitatively outperforms plausible alternatives.
+I developed a new computational model to understand flexible decision making in a dynamic environment.  In a changing environment, we must decide whether errors result from poor choices or a change in the environment.  The Bayes optimal solution is to treat negative outcomes as evidence for a change of environment and to weight that evidence by the confidence in our choice.  I developed a model that showed how humans could approximate the optimal solution using very simple computations and developed a psychophysics experiment to test the model predictions. I showed that the model accurately predicts human choices and quantitatively outperforms plausible alternatives.
+
+**Collaborator:** Roozbeh Kiani (New York University)
 
 ![Figure 3]({{ site.baseurl }}/images/cngenv.png "Changing environment."){: .center-image }
 <p align="center">
