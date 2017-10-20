@@ -9,7 +9,7 @@ title: Kaggle challenge | Airbnb New User Bookings
 <br>
 Airbnb is an online marketplace that enables people to lease or rent short-term lodging.  The goal of this Kaggle challenge was to predict which country a new Airbnb user's first booking destination will be based on a set of demographics and web session records. Additionally, I used model-based analysis to understand which factors are most predictive about whether a new user would book a destination.
 
-# Data overview
+# Data Overview
 
 The training data set consists of user information collected from 6/28/2010 - 6/30/2014 with the booking destination (target variable) provided (213,451 users).  The goal of the challenge is to predict the booking destination for a test data set collected from 7/1/2014 - 9/30/2014 (62,096 users).  
 
@@ -33,14 +33,14 @@ The target variable consisted of 12 possible country destinations.  The classes 
 </p>
 
 
-# Data preparation
+# Data Preparation
 
 I formatted and cleaned the user information to be suitable for modeling.  I checked the distributions of all user features.  Dates were formatted into years, months, days, and weeks of the year.  Ages that were likely to be errors (<14 or >100) were recoded into missing values.  Missing values were not imputed, but were coded as zero and a new feature was added to indicate missing values.  One-hot-feature encoding was used to generate features for all categorical variables.  All features were rescaled between zero and one so that features with higher magnitudes did not dominate the objective functions for certain algorithms.  
 
 For the web sessions data, I encoded each unique combination of action name, type, and detail as a separate feature.  These were binary variables to indicate whether or not the user took a particular action at any time.  I also explored versions that considered the number of times a user took each action and the total time spent on each action, but found no increase in model performance.  In total, the models used 346 features.
 
 
-# Predicting whether a new user will book.
+# Predicting Whether a New User Will Book.
 
 To understand the data, I first trained a linear model for binary classification of users that booked or did not book any desintation.  I used L1-regularized logistic regression because it can be trained reasonably fast, provides  interpretable coefficients about feature importance, and establishes a baseline linear model against which more complex algorithms can be compared.  The regularization term penalizes the model for higher coefficient values to prevent overfitting and returns sparse coefficient vectors that can inform feature selection.  The regularization term was selected using 5-fold cross validation over a range of values.
 
@@ -53,11 +53,11 @@ The logistic regression model accurately predicted whether or not a user would b
     <font size="2"><b>Figure 4.</b> Non-zero regression coefficients used to predict users who did or did not book with Airbnb identified with L1-regularized logistic regression.  Positive coefficients indicate a positive relationship with probability of booking.  </font>
 </p>
 
-# Predicting booking destinations: 
+# Predicting Booking Destinations: 
 
 I evaluated three algorithms for the multiclass classification problem of predicting the actual country destination of that the users booked.  For model comparison, I used macro-averaged auROC which combines auROC for each class with equal weight regardless of the number of observations.  I used confusion matrices to determine where the models were succeeding and failing. I also monitored the normalized discounted cumulative gain (NDCG) score, the ranking quality metric used by Kaggle to evaluate submissions. Typically, a bootstrap could be used to assess the statistical significance of differences in error metrics, but in the interest of time I simply gauged performance on the holdout and test set.  
 
-## L1-regularized logistic regression
+## L1-Regularized Logistic Regression
 I started with a one-versus-next L1-regularized logistic regression approach implemented in scikit-learn.  The model trains a family of linear classifiers to distinguish one class from all others and predicts the class with the highest probability.  The linear model performs above chance as indicated by a macro auROC of 0.66.  The confusion matrix indicates that the model is heavily biased to the non-booking (NDF) and US categories.  
 
 ![Figure 5]({{ site.baseurl }}/images/airbnb_conf_mat.png "Confusion matrices.")
@@ -66,7 +66,7 @@ I started with a one-versus-next L1-regularized logistic regression approach imp
 </font>
 </p>
 
-## Boosted trees: XGBoost
+## Boosted Trees: XGBoost
 XGBoost is a tree ensembling method that learns a set of decision trees by asking whether new tree structures will adequately improve a regularized objective function. Unlike logistic regression, XGBoost learns nonlinear decision bounds and may better handle unbalanced classes.  One tradeoff is that the model requires more hyperparameters (e.g., number of trees, learning rate, etc), which I selected using randomized search with 5-fold cross validation.  The resulting model  produced a notable improvement in auROC for the holdout dataset (0.70). XGBoost also provides an index of feature importance, computed as the reduction in impurity at each node averaged over all trees for each feature.  Unlike the linear model, XGBoost learned a nonlinear relationship between age and booking that was evident in the data.
 
 ![Figure 6]({{ site.baseurl }}/images/xgb_feature_importance_barh.png "XGB_feature_importance.")
@@ -74,7 +74,7 @@ XGBoost is a tree ensembling method that learns a set of decision trees by askin
     <font size="2"><b>Figure 6.</b> Feature importance ratings obtained from XGBoost.  Larger values indicate that a feature promoted greater reductions in impurity.  </font>
 </p>
 
-## Artificial neural network: Multi-layer perceptron
+## Artificial Neural Network: Multi-Layer Perceptron
 Multi-layer perceptrons (MLP) are a class of feedforward neural network models that learns combinations of features to transform the data into a space where they become lineary separable.  These models are very powerful, but  highly parameterized and require careful training for good results.  I trained the model using mini-batch stochastic gradient descent implemented in Keras with a TensorFlow backend.  To efficiently select hyperparameters, I implemented a randomized search with 5-fold cross validation in parallel on a high-performance computing cluster.  The trained network outperformed both logistic regression and boosted trees on the holdout set (auROC = 0.74).  This algorithm would be a great choice for situations in which high accuracy is paramount, but long training times are not an issue.  
 
 ![Figure 7]({{ site.baseurl }}/images/auROC.png "auROC."){: .center-image }
