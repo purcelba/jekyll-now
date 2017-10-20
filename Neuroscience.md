@@ -7,7 +7,7 @@ I study how the brain combines different types of information to make decisions.
 
 ___
 
-## Neural models of decision making
+## Neural Models of Decision Making
 
 I developed neural computational models of decision making for my PhD thesis.  My models use neural time-series data recorded from macaque monkeys making visual decisions as input to shallow artificial neural networks.  The models predict the monkey's choices and response times and reproduce the dynamics of actual neural populations.  You can find an overview the modeling framework and sample code in the [gated_accumulator_model](https://github.com/purcelba/gated_accumulator_model) repository or read more about the details in the papers listed below.
 
@@ -32,7 +32,7 @@ I developed neural computational models of decision making for my PhD thesis.  M
 
 ___
 
-## Models of adaptive decision making
+## Models of Adaptive Decision Making
 
 I combined human psychophysical experiments, computational models of behavior, and neurophysiological recordings from behaving macaque monkeys to understand how we adapt our decision strategies following mistakes. I fit models of choice and reaction time to human and monkey behavior and optimized model parameters to make inferences about the underlying neural mechanisms. To test the model predictions, I analyzed neural dynamics recorded from the parietal cortex of monkeys performing a perceptual decision-making task. The neural data matched the model predictions and showed that although our visual sensitivity drops following errors, our brain can compensate by adaptively slowing down the subsequent choice. You can read more about it in the following paper or check out some of the popular press on the article by following the links below.  
 
@@ -74,7 +74,7 @@ I developed a new computational model to understand flexible decision making in 
 
 ___
 
-## Predicting choices from large-scale neural recordings
+## Predicting Choices from Large-Scale Neural Recordings
 
 I use state-of-the-art electrophysiology technology to simultaneously record activity from hundreds of neurons in multiple areas of the primate brain.  I record neural activity while monkeys make decisions based on visual information.  I use dimensionality reduction methods to visualize the evolution neural states during decision formation. I use linear classifiers to decode the information represented in different brain region and to predict the upcoming choices. I study the correlation structure of signals within and across areas to to understand neural interactions.  My results from this project will be presented at the [Society for Neuroscience Annual Meeting](https://www.sfn.org/annual-meeting/neuroscience-2017) this fall.
 
@@ -86,7 +86,7 @@ I use state-of-the-art electrophysiology technology to simultaneously record act
 </p>
 
 ___
-## Neurophysiological representations of visual salience
+## Neurophysiological Representations of Visual Salience
 
 In two studies, I recorded activity from neurons in medial and lateral frontal cortex of monkeys trained to perform a visual search task in which they located a target item among distractors (e.g., red circle among green circles).  I used auROC curves and other analyses to quantify the information about object identity carried by individual neurons.  I found that lateral frontal cortex robustly represents the location of the target, but medial frontal corext did not.  Instead, medial frontal cortex seems to play a role in signaling feedback.
 
@@ -102,7 +102,7 @@ In two studies, I recorded activity from neurons in medial and lateral frontal c
 - Purcell, B. A., Heitz, R. P., Cohen, J. Y., & Schall, J. D. (2012). Response variability of frontal eye field neurons modulates with sensory input and saccade preparation but not visual search salience. Journal of neurophysiology, 108(10), 2737-2750.[pdf](https://github.com/purcelba/purcelba.github.io/blob/master/docs/PurcellHeitzCohenSchall2012.pdf)
 
 ___
-## Homologous neural mechanisms of visual attention and working memory in humans and non-human primates
+## Homologous Neural Mechanisms of Visual Attention and Working Memory in Humans and Non-Human Primates
 
 I collaborated with Goeff Woodman to conduct two studies of electroencephalogram (EEG) recordings - brain activity recorded from the surface of the head that can be used to index cognitive states.  My work helped to establish a non-human primate model of EEG components associated with visual attention and working memory.  By pairing EEG from outside the skull with recordings of neural activity from inside the brain, we could study how neural activity gives rise to observed EEG.  We showed how frontal cortex indirectly contributes to the generation of attention and memory related EEG signals.  You can read more about this work in the papers below or check out [Geoff's website](http://www.psy.vanderbilt.edu/faculty/woodman/) for more information about his awesome work.
 
@@ -119,7 +119,7 @@ I collaborated with Goeff Woodman to conduct two studies of electroencephalogram
 
 ___
 
-## Evaluating methods for measuring and visualizing human similarity judgments
+## Evaluating Methods for Measuring and Visualizing Human Similarity Judgments
 
 As an undergraduate, I evaluated methods for visualizing the structure of human categorization of colors and personality traits.   I collected human similarity judgments of color and personality trait stimuli using a "sort-and-merge" procedure in which subjects grouped stimuli into clusters based on their perceived similarity and subsequently merged the clusters based their overall group similarity.  I visualized the resulting similarity structure using an multidimensional scaling (MDS) procedrue.  I assessed the internal validity of the procedure using percent variance explained and the external validity of the procedure by comparing the shape of the solution to a "ground truth" dataset obtained using pairwise similarity judgments.   I found that the sort-and-merge procedure could capture the structure of judgments quite well, establishing it as a cheaper and less time-consuming alternative to pairwise judgments for measuring human categorization.
 
