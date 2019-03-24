@@ -76,7 +76,7 @@ ___
 
 ## Predicting Choices from Large-Scale Neural Recordings
 
-I use state-of-the-art electrophysiology technology to simultaneously record activity from hundreds of neurons in multiple areas of the primate brain.  I record neural activity while monkeys make decisions based on visual information.  I use dimensionality reduction methods to visualize the evolution neural states during decision formation. I use linear classifiers to decode the information represented in different brain region and to predict the upcoming choices. I study the correlation structure of signals within and across areas to to understand neural interactions.  My results from this project will be presented at the [Society for Neuroscience Annual Meeting](https://www.sfn.org/annual-meeting/neuroscience-2017) this fall.
+I use state-of-the-art electrophysiology technology to simultaneously record activity from hundreds of neurons in multiple areas of the primate brain.  I record neural activity while monkeys make decisions based on visual information.  I use dimensionality reduction methods to visualize the evolution of neural states during decision formation. I use linear classifiers to decode the information represented in different brain region and to predict the upcoming choices. I study the correlation structure of signals within and across areas to to understand neural interactions.  My results from this project will be presented at the [Society for Neuroscience Annual Meeting](https://www.sfn.org/annual-meeting/neuroscience-2017) this fall.
 
 **Collaborator:** Roozbeh Kiani (New York University)
 
